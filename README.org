@@ -1,6 +1,6 @@
 This is the umbrella directory for Pugofer.
 It contains
-- the sources for the executable =pug=
+- the sources for the executable =pug= including install instructions
 - techreports
 - emacs modes
 * The Name
