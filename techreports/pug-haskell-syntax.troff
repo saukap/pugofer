@@ -1,7 +1,7 @@
 Arunachala Siva Arunachala Ramana
-groff -s -e -mgm -o2
-nroff -s -e -mgm
-.so /home/fac/rpm/bin/arunachala
+groff -s -e -mm -T pdf
+nroff -s -e -mm
+.so arunachala
 .ds HF 3 3 2 2
 .ds HP +3 +1 +1
 .EQ
@@ -14,13 +14,23 @@ define ( @{roman "(\h'+.1n'"}@
 
 .S +4
 .ce
-\fBElementary Notational Issues\fP
+\fBPug Haskell syntax differences\fP
+.S
+.S +2
+
+.ce 2
+Rusi Mody
+Changed 13th March 2022
 .S
 .if t \{
 .2C
 \}
 .H 1 "Introduction"
-This note is about twiddle-dee and twiddle-dum \(em at least that is
+In its underbelly pug is nearly identical to Mark Jones' gofer. And therefore Haskell. On the visible side there are marked differences.
+
+Why?
+
+Some may argue this note is about twiddle-dee and twiddle-dum \(em at least that is
 what a self-respecting mathematician would say.  But we are not
 mathematicians, we are computer scientists \(em or rather, computer
 programmers.  I however believe that just as the mathematics of the
