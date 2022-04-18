@@ -1,0 +1,45 @@
+* gofer
+This gofer is a fork of Mark Jones original with some additions and modifications, the most visible one being the /Dijkstra dot/ for function application. See [[https://www.cs.utexas.edu/users/EWD/ewd13xx/EWD1300.PDF][Notational Conventions]] – pg 8 onwards.
+
+I used to call it /pugofer/ since I was using it to teach when at Pune University in the early 90s.
+
+Mark Jones is gratefully acknowledged for this pioneering work.
+* Setup
+See [[file:INSTALL.org][installation/setup]]
+* Sample
+To see how source looks with these changed syntaxes, look at the standard prelude: [[file:pustd.pre][pustd.pre]].
+
+The alternate prelude [[file:pusimple.pre][pusimple]] is particularly neat for those who feel the need to grok Hindley-Milner before getting into typeclasses. With that you'll get, for example:
+#+BEGIN_SRC haskell
+? :t (+)
+(+) : Int -> Int -> Int
+? :t (==)
+(==) : a -> a -> Bool
+#+END_SRC
+* Syntax late-bound
+You can switch back to classic Haskell syntax with =:s -S=
+#+BEGIN_SRC haskell
+? map.(1+).[1,2,3]
+[2, 3, 4] : [Int]
+
+? :s -S
+? map (1+) [1,2,3]
+[2, 3, 4] :: [Int]
+
+#+END_SRC
+* Building
+- =cd src=
+- Choose the architecture at the top of [[file:src/prelude.h][prelude.h]]
+- Choose C compiler -- =CC= -- in [[file:src/Makefile][Makefile]] 
+- =$ make= 
+There is no configure to run.\\
+Windows seems to build with mingw for 32 bit but not 64.
+* Literature
+Justifications for these changes are explained in [[http://www.the-magus.in/Publications/notation.pdf][Notes on Notation]]
+
+Also may be of interest:
+- [[http://www.the-magus.in/Publications/ewd.pdf][Thought Dialogue with EWD]]
+- [[http://www.the-magus.in/Publications/DotingOnTheDot.pdf][Doting on the Dot]]
+- [[http://www.the-magus.in/Publications/purgatory.pdf][Lunchtime at Purgatory]]
+
+Evidently at the end of his life Dijkstra did [[https://www.cs.utexas.edu/users/EWD/OtherDocs/To%20the%20Budget%20Council%20concerning%20Haskell.pdf][support FP]]
