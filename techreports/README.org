@@ -1,0 +1,2 @@
+Some of these pdfs are written in troff in the 90s.
+They show badly in (my) browser but are fine when downloaded and read with evince
