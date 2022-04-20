@@ -28,9 +28,24 @@ Rusi Mody
 June 1995
 Revised 13 March 2022
 .H 1 "Introduction"
+
+------- Added 2022---------
+
 In its underbelly pug is nearly identical to Mark Jones' gofer. And therefore Haskell. On the visible side however there are marked differences.
 
 Why?
+
+It can be read at two levels
+.BL
+.LI
+At the \(mi relatively superficial-looking \(mi level its about how Haskell/gofer differs from pug. See Appendix at end if that's all you're looking for
+.LI
+At the deeper level its about the pedagogical reasons and principles for why (I consider!!) the pugofer approach better for a beginner than Haskell
+.LI
+We distinguish the two levels by using Pugofer to refer to the philosophical soup made my mixing Mark Jones' gofer with Dijkstra's notation/methods and other exotic spices and \fCpug\fP to talk of the executable.
+.LE
+
+------- From 1995---------
 
 This note is about twiddle-dee and twiddle-dum \(em at least that is
 what a self-respecting mathematician would say.  But we are not
