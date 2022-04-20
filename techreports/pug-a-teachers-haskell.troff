@@ -45,6 +45,8 @@ At the deeper level its about the pedagogical reasons and principles for why (I 
 We distinguish the two levels by using Pugofer to refer to the philosophical soup made my mixing Mark Jones' gofer with Dijkstra's notation/methods and other exotic spices and \fCpug\fP to talk of the executable.
 .LE
 
+Some of the notational preferences here eg the \fC:\fP and \fC::\fP flip have been independently made, often decades later, eg by Agda and Idris.
+
 ------- From 1995---------
 
 This note is about twiddle-dee and twiddle-dum \(em at least that is
