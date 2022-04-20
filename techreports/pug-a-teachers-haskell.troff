@@ -36,14 +36,15 @@ In its underbelly pug is nearly identical to Mark Jones' gofer. And therefore Ha
 Why?
 
 It can be read at two levels
-.BL
+.AL
 .LI
 At the \(mi relatively superficial-looking \(mi level its about how Haskell/gofer differs from pug. See Appendix at end if that's all you're looking for
 .LI
 At the deeper level its about the pedagogical reasons and principles for why (I consider!!) the pugofer approach better for a beginner than Haskell
-.LI
-We distinguish the two levels by using Pugofer to refer to the philosophical soup made my mixing Mark Jones' gofer with Dijkstra's notation/methods and other exotic spices and \fCpug\fP to talk of the executable.
 .LE
+
+We distinguish the two levels by using "Pugofer" to refer to the philosophical soup made my mixing Mark Jones' gofer with Dijkstra's notation/methods and other exotic spices and \fC"pug"\fP to talk of the executable.
+You could read pugofer as "Platonic Universe that's GOod for Equational Reasoning"; and \fCpug\fP as "Platonic Universe for Geeks"
 
 Some of the notational preferences here eg the \fC:\fP and \fC::\fP flip have been independently made, often decades later, eg by Agda and Idris.
 
