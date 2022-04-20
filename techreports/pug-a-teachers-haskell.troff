@@ -44,7 +44,7 @@ At the deeper level its about the pedagogical reasons and principles for why (I 
 .LE
 
 We distinguish the two levels by using "Pugofer" to refer to the philosophical soup made my mixing Mark Jones' gofer with Dijkstra's notation/methods and other exotic spices and \fC"pug"\fP to talk of the executable.
-You could read pugofer as "Platonic Universe that's GOod for Equational Reasoning"; and \fCpug\fP as "Platonic Universe for Geeks"
+You could read pugofer as \fIPlatonic Universe that's GOod for Equational Reasoning\fP; and \fCpug\fP as \fIPlatonic Universe for Geeks.\fP
 
 Some of the notational preferences here eg the \fC:\fP and \fC::\fP flip have been independently made, often decades later, eg by Agda and Idris.
 
