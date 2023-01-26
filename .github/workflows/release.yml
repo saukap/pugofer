@@ -24,7 +24,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          args: 'src/*.zip'
+          args: 'pug/src/*.zip'
   generate-macos:
     name: Create macos artifacts
     runs-on: macos-11
@@ -39,34 +39,5 @@ jobs:
       - name: Upload files to a GitHub release
         uses: svenstaro/upload-release-action@2.3.0
         with:
-          file: 'src/pug_macos.zip'
+          file: 'pug/src/pug_macos.zip'
           repo_token: ${{ secrets.GITHUB_TOKEN }}
-  publish-container:
-    name: Publish pugofer container
-    runs-on: ubuntu-latest
-    needs: [generate]
-    steps:
-      - name: Login to GitHub Container Registry
-        uses: actions/checkout@v2
-
-      - name: Docker meta
-        id: meta
-        uses: docker/metadata-action@v4
-        with:
-          images: ghcr.io/${{ github.actor }}/pugofer
-          flavor: latest=true
-          
-      - name: Login to image repository
-        uses: docker/login-action@v2
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Build and push
-        uses: docker/build-push-action@v3
-        with:
-          push: true
-          context: .
-          file: ./.github/pugofer.dockerfile
-          tags: ghcr.io/${{ github.actor }}/pugofer:latest
