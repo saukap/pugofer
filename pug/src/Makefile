@@ -38,6 +38,9 @@ OPT1		=
 gofer		: $(IOBJECTS)
 		  $(CC) $(CFLAGS) $(OPTFLAGS) $(IOBJECTS) -o gofer $(LDFLAGS)
 
+gofer_app : $(IOBJECTS)
+		  $(CC) $(CFLAGS) -DMIDDLEDOT=1 $(OPTFLAGS) $(IOBJECTS) -o gofer_app $(LDFLAGS)
+
 gofc		: $(COBJECTS)
 		  $(CC) $(CFLAGS) $(OPTFLAGS) $(COBJECTS) -o gofc $(LDFLAGS)
 		  strip gofc
