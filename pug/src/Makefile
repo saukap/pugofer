@@ -34,16 +34,20 @@ OPT1		=
 #OPT1		= -O1
 
 #all		: gofer gofc runtime.o
+gofer_uni : CFLAGS += -DMIDDLEDOT=1
 
 gofer		: $(IOBJECTS)
-		  $(CC) $(CFLAGS) $(OPTFLAGS) $(IOBJECTS) -o gofer $(LDFLAGS)
+		$(CC) $(CFLAGS) $(OPTFLAGS) $(IOBJECTS) -o gofer $(LDFLAGS)
+
+gofer_uni : $(IOBJECTS)
+		  $(CC) $(CFLAGS) $(OPTFLAGS) $(IOBJECTS) -o gofer_uni $(LDFLAGS)
 
 gofc		: $(COBJECTS)
 		  $(CC) $(CFLAGS) $(OPTFLAGS) $(COBJECTS) -o gofc $(LDFLAGS)
 		  strip gofc
 
 .c.o		:
-		  $(CC) -c $(CFLAGS) $(OPTFLAGS) $<
+		$(CC) -c $(CFLAGS) $(OPTFLAGS) $<
 
 clean		:
 		  rm -f *.o $(TESTS)
